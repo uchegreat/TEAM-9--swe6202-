@@ -1,0 +1,21 @@
+curl ---request GET http://127.0.0.1:5000
+
+curl -X POST http://127.0.0.1:5000/weather/add \
+-H "Content-Type: application/json" \
+-d '{
+    "date": "2024-11-26",
+    "time": "14:30:00",
+    "timezone_offset": "UTC+10:00",
+    "coordinates": "12.34, 56.78",
+    "water_temp": 25.4,
+    "air_temp": 29.1,
+    "humidity": 15.6,
+    "wind_speed": 20.4,
+    "wind_direction": 180,
+    "precipitation": 5.2,
+    "haze": 70.0,
+    "notes": "Clear skies with some haze."
+}'
+
+curl -X GET http://127.0.0.1:5000/weather -H   "Accept: application/json"
+
